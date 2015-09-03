@@ -80,23 +80,17 @@ CIO Custom Fields and Groups professional edition filters the parameters in the 
 
 Similarly, CIO Custom Fields and Groups professional edition hooks into Pods to display a header and footer label only without an input cell. 
 
-CIO Custom Fields and Groups uses builtin table structures of WordPress and PODS to define groups. No extra taxonomy or data is created. 
+CIO Custom Fields and Groups uses builtin table structures of WordPress and PODS to define groups. No extra taxonomy or data is created. The professional edition of CIO Custom Fields and Groups supports PODS shortcode and magic tags in shortcode template.
 
-To display a group defined by the header field "my_header", you would use the following short code. 
+To display a group defined by the header field "my_header" from a custom post type called "product", you would use the following short code. 
 
-`[cio-header] my_header [/cio-header]`
+`[pods name="product" id=123] {@my_header} [/cio-header]`
 
-Similarly, to display a group defined by the footer field "my_footer", you would use this:
+When CIO Custom Fields and Groups professional edition is activated, and preset display conditions are met, the custom fields belong to this group will be displayed. 
 
-`[cio-footer] my_footer [/cio-footer]`
-
-If you use these short codes in page template, you may use the do_shortcode function and echo the result, or instantiate the class from this plugin, and manipulate the groups and fields. 
-
-`echo do_shortcode('[cio-header] my_header [/cio-header]')`
-
+When CIO Custom Fields and Groups professional edition is deactivated, the above shortcode simply displays nothing, as no data is ever stored in the special relationship field "my_header". 
 
 Please see screen shots for more examples. 
-
 
 CIO Custom Fields and Groups Professional Edition comes with 
 
