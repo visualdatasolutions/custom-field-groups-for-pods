@@ -84,7 +84,7 @@ CIO Custom Fields and Groups uses builtin table structures of WordPress and PODS
 
 To display a group defined by the header field "my_header" from a custom post type called "product", you would use the following short code. 
 
-`[pods name="product" id=123] {@my_header} [/cio-header]`
+`[pods name="product" id=123] {@my_header} [/pods]`
 
 When CIO Custom Fields and Groups professional edition is activated, and preset display conditions are met, the custom fields belong to this group will be displayed. 
 
