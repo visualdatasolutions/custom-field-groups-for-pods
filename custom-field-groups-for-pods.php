@@ -5,7 +5,7 @@ Plugin Name: CIO Custom Field Groups for PODS Free
 Plugin URI: http://vipp.com.au/cio-custom-fields-importer/custom-field-groups-for-pods/
 Description: This plugin extends PODS to group custom fields quickly and intuitively. The professional edition supports location rules and short codes and other premium features.
 Author: <a href="http://vipp.com.au">VisualData</a>
-Version: 1.00
+Version: 1.0.0
 
 */
 
@@ -18,11 +18,11 @@ defined( 'ABSPATH' ) || die( 'No direct script access allowed!' );
  */ 
 if (is_multisite()) {
 
-	$cio_cfgpods_active_plugins = array_merge(array_keys(get_site_option('active_sitewide_plugins')), get_option( 'active_plugins' ));
+	$cio_cfgpods_active_plugins = array_merge(array_keys(get_site_option('active_sitewide_plugins', array())), get_option( 'active_plugins', array() ));
 	
 } else {
 
-	$cio_cfgpods_active_plugins = get_option( 'active_plugins' );
+	$cio_cfgpods_active_plugins = get_option( 'active_plugins', array() );
 }
 
 	
